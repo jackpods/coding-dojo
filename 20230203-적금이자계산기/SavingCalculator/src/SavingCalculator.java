@@ -37,6 +37,6 @@ public class SavingCalculator {
         System.out.println(String.format("원금합계: %,d 원",sum));
         System.out.println("세후이자: 원");
         System.out.println("세후 총 수령액: ");
-
+        //
     }
 }
