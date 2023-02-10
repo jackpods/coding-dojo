@@ -56,25 +56,25 @@ import java.util.Scanner;
 
 
 public class Prime {
-        // 2이상 1000이하 자연수의 집합에서 소수의 개수를 구하는 알고리즘을 작성하시오.
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-            int number = scanner.nextInt();
-            boolean flag;
-            int cnt = 0;
-            for(int i=2; i<=number; i++){
-                flag = true;
-                for(int j=2; j<i; j++){
-                    if(i%j ==0){
-                        flag = false;
-                    }
-                }
-                if(flag == true){
-                    cnt++;
-
+    // 2이상 1000이하 자연수의 집합에서 소수의 개수를 구하는 알고리즘을 작성하시오.
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        boolean flag;
+        int cnt = 0;
+        for (int i = 2; i <= number; i++) {
+            flag = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    flag = false;
                 }
             }
-            System.out.println( cnt);
+            if (flag == true) {
+                cnt++;
+
+            }
         }
-        }
+        System.out.println(cnt);
+    }
+}
 
