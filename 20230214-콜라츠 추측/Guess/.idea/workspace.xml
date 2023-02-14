@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74e9b13b-823d-4f65-8bf7-22439c242e9e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Number.java" afterDir="false" />
+    <list default="true" id="66d2fd6e-72ac-44a5-8b0a-fc1092e875ea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../20230213-하샤드 수/hasardeNumber/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../20230213-하샤드 수/hasardeNumber/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Guess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Guess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +26,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2LewRRJJiZjnJRZKFJCJzuhB7M9" />
+  <component name="ProjectId" id="2LhnlTr20vUTpru2kMZODGDekb8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,12 +47,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="74e9b13b-823d-4f65-8bf7-22439c242e9e" name="Changes" comment="" />
-      <created>1676244848107</created>
+      <changelist id="66d2fd6e-72ac-44a5-8b0a-fc1092e875ea" name="Changes" comment="" />
+      <created>1676332332787</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1676244848107</updated>
-      <workItem from="1676244849917" duration="2198000" />
+      <updated>1676332332787</updated>
+      <workItem from="1676332333837" duration="6320000" />
     </task>
     <servers />
   </component>
