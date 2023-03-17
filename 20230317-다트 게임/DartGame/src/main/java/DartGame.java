@@ -1,48 +1,46 @@
-import java.util.ArrayList;
-import java.util.List;
 
-public class DartGame {
-    public boolean isInteger(String dartResult) {
-        try {
-            Integer.parseInt(dartResult);
-            return true;
-        } catch (NumberFormatException ex) {
-            return false;
-        }
-    }
+import java.util.*;
 
+class Solution {
     public int solution(String dartResult) {
         int answer = 0;
+        int score[] = new int[3];
+        int cur = 0;
+        int idx = 0;
+        String num = "";
 
-        String[] arrayWord = dartResult.split("");
+        for(int i=0; i<dartResult.length(); i++){
+            char ch = dartResult.charAt(i);
 
-        List<Integer> current = new ArrayList<>();
-
-        for (int i = 0; i < arrayWord.length; i += 1) {
-            if (isInteger(arrayWord[i])) {
-                //current = Integer.parseInt(arrayWord[i]);
-            }
-
-            if (!isInteger(arrayWord[i])) {
-                switch (arrayWord[i]) {
-                    case "S" -> current.add((int) Math.pow(Double.parseDouble(arrayWord[i - 1]), 1));
-
-                    case "D" -> current.add((int) Math.pow(Double.parseDouble(arrayWord[i - 1]), 2));
-
-                    case "T" -> current.add((int) Math.pow(Double.parseDouble(arrayWord[i - 1]), 3));
-
-                    case "*" -> {
-                        current.add(Integer.parseInt(arrayWord[i - 1]) * 2);
-
-//                        current = Integer.parseInt(arrayWord[i]) * 2;
-
+            if(ch >= '0' && ch <= '9'){
+                num += String.valueOf(ch);
+            }else if (ch == 'S' || ch == 'D' || ch == 'T') {
+                cur = Integer.parseInt(num);
+                if (ch == 'S') {
+                    cur = (int) Math.pow(cur, 1);
+                } else if (ch == 'D') {
+                    cur = (int) Math.pow(cur, 2);
+                } else {
+                    cur = (int) Math.pow(cur, 3);
+                }
+                score[idx++] = cur;
+                num = "";
+            } else {
+                if (ch == '#') {
+                    score[idx - 1] *= -1;
+                } else {
+                    score[idx - 1] *= 2;
+                    if (idx - 2 >= 0) {
+                        score[idx - 2] *= 2;
                     }
                 }
-                //accumulate = current;
             }
+        }
+
+        for (int i = 0; i < score.length; i++) {
+            answer += score[i];
         }
 
         return answer;
     }
-
 }
