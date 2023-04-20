@@ -1,5 +1,7 @@
 public class Solution {
     public String solution(String s) {
+
+
         StringBuilder answer = new StringBuilder();
 
         String[] array = s.split(" ");
