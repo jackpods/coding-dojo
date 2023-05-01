@@ -7,7 +7,7 @@
 ## 실행
 ## 분석 및 반성
 public String solution(String[] participant, String[] completion) {  
-        String answer = "";  
+&nbsp;&nbsp;String answer = "";  
         for (String nonFinisher : participant) {  
             boolean isContain = Arrays.asList(completion).contains(nonFinisher);  
             if (!isContain) {  
@@ -18,3 +18,16 @@ public String solution(String[] participant, String[] completion) {
 }  
 여기까지는 참여자 명단과 완주자 명단을 비교만 했을 뿐 동명이인이 있을 경우를 처리하지 못한다.
 ## 다른 방법
+public String solution(String[] participant, String[] completion) {  
+String answer = "";  
+HashMap<String, Integer> hm = new HashMap<>();  
+for (String player : participant) hm.put(player, hm.getOrDefault(player, 0) + 1);  
+for (String player : completion) hm.put(player, hm.get(player) - 1);  
+
+        for (String key : hm.keySet()) {  
+            if (hm.get(key) != 0){  
+                answer = key;  
+            }  
+        }  
+        return answer;  
+    }  
