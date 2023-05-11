@@ -1,0 +1,11 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "Solution",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Jack",
+  "license": "ISC"
+}
